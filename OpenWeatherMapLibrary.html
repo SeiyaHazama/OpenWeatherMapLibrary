@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module OpenWeatherMapLibrary</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>OpenWeatherMapLibrary</strong></big></big> (22 May 2018)</font></td></tr></table>
+    <p><tt>This&nbsp;library&nbsp;is&nbsp;can&nbsp;get&nbsp;weather&nbsp;from&nbsp;OpenWeatherMap.org.<br>
+To&nbsp;use&nbsp;this&nbsp;library,&nbsp;API&nbsp;key&nbsp;is&nbsp;needed&nbsp;in&nbsp;addition&nbsp;to&nbsp;this&nbsp;library.<br>
+&nbsp;<br>
+OpenWeatherMap:&nbsp;<a href="https://openweathermap.org">https://openweathermap.org/</a></tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="https://docs.python.org/3/library/datetime.html">datetime</a><br>
+</td><td width="25%" valign=top><a href="https://docs.python.org/3/library/json.html">json</a><br>
+</td><td width="25%" valign=top><a href="https://docs.python.org/3/library/urllib.html">urllib</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dd>
+<dl>
+<dt>&nbsp;</dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="OpenWeatherMapLibrary">class <strong>OpenWeatherMapLibrary</strong></a></font></td></tr>
+
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="OpenWeatherMapLibrary-__init__"><strong>__init__</strong></a>(self, key)</dt><dd><tt>Constructor.<br>
+Set&nbsp;the&nbsp;parameter(API&nbsp;key)&nbsp;in&nbsp;request_key.<br>
+&nbsp;<br>
+@param&nbsp;key&nbsp;API&nbsp;key</tt></dd></dl>
+
+<dl><dt><a name="OpenWeatherMapLibrary-getCityName"><strong>getCityName</strong></a>(self, data)</dt><dd><tt>Convert&nbsp;JSON&nbsp;to&nbsp;city&nbsp;name.<br>
+This&nbsp;function&nbsp;is&nbsp;return&nbsp;the&nbsp;city&nbsp;name&nbsp;of&nbsp;observation&nbsp;point.<br>
+JSON&nbsp;is&nbsp;can&nbsp;get&nbsp;from&nbsp;getWeatherInfo&nbsp;function.<br>
+&nbsp;<br>
+@param&nbsp;data&nbsp;JSON<br>
+@return&nbsp;String</tt></dd></dl>
+
+<dl><dt><a name="OpenWeatherMapLibrary-getDetailedWeather"><strong>getDetailedWeather</strong></a>(self, data)</dt><dd><tt>Convert&nbsp;JSON&nbsp;to&nbsp;detail&nbsp;weather.<br>
+This&nbsp;function&nbsp;is&nbsp;can&nbsp;get&nbsp;weather&nbsp;more&nbsp;than&nbsp;getWeather&nbsp;function.<br>
+JSON&nbsp;is&nbsp;can&nbsp;get&nbsp;from&nbsp;getWeatherInfo&nbsp;function.<br>
+&nbsp;<br>
+@param&nbsp;data&nbsp;JSON<br>
+@return&nbsp;String</tt></dd></dl>
+
+<dl><dt><a name="OpenWeatherMapLibrary-getLocation"><strong>getLocation</strong></a>(self, data)</dt><dd><tt>Convert&nbsp;JSON&nbsp;to&nbsp;location&nbsp;information.<br>
+This&nbsp;function&nbsp;is&nbsp;return&nbsp;the&nbsp;location&nbsp;information&nbsp;of&nbsp;observation&nbsp;point.<br>
+JSON&nbsp;is&nbsp;can&nbsp;get&nbsp;from&nbsp;getWeatherInfo&nbsp;function.<br>
+&nbsp;<br>
+@param&nbsp;data&nbsp;JSON<br>
+@return&nbsp;list[Longitude,&nbsp;Latitude]</tt></dd></dl>
+
+<dl><dt><a name="OpenWeatherMapLibrary-getSunriseTime"><strong>getSunriseTime</strong></a>(self, data)</dt><dd><tt>Convert&nbsp;JSON&nbsp;to&nbsp;sunrise&nbsp;time.<br>
+This&nbsp;function&nbsp;is&nbsp;return&nbsp;the&nbsp;converted&nbsp;local&nbsp;time&nbsp;from&nbsp;unix&nbsp;time.<br>
+JSON&nbsp;is&nbsp;can&nbsp;get&nbsp;from&nbsp;getWeatherInfo&nbsp;function.<br>
+&nbsp;<br>
+@param&nbsp;data&nbsp;JSON<br>
+@return&nbsp;datetime</tt></dd></dl>
+
+<dl><dt><a name="OpenWeatherMapLibrary-getSunsetTime"><strong>getSunsetTime</strong></a>(self, data)</dt><dd><tt>Convert&nbsp;JSON&nbsp;to&nbsp;sunset&nbsp;time.<br>
+This&nbsp;function&nbsp;is&nbsp;return&nbsp;the&nbsp;converted&nbsp;local&nbsp;time&nbsp;from&nbsp;unix&nbsp;time.<br>
+JSON&nbsp;is&nbsp;can&nbsp;get&nbsp;from&nbsp;getWeatherInfo&nbsp;function.<br>
+&nbsp;<br>
+@param&nbsp;data&nbsp;JSON<br>
+@return&nbsp;datetime</tt></dd></dl>
+
+<dl><dt><a name="OpenWeatherMapLibrary-getTemperature"><strong>getTemperature</strong></a>(self, data)</dt><dd><tt>Convert&nbsp;JSON&nbsp;to&nbsp;temperature.<br>
+JSON&nbsp;is&nbsp;can&nbsp;get&nbsp;from&nbsp;getWeatherInfo&nbsp;function.<br>
+&nbsp;<br>
+@param&nbsp;data&nbsp;JSON<br>
+@return&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="OpenWeatherMapLibrary-getWeather"><strong>getWeather</strong></a>(self, data)</dt><dd><tt>Convert&nbsp;JSON&nbsp;to&nbsp;weather.<br>
+JSON&nbsp;is&nbsp;can&nbsp;get&nbsp;from&nbsp;getWeatherInfo&nbsp;function.<br>
+&nbsp;<br>
+@param&nbsp;data&nbsp;JSON<br>
+@return&nbsp;String</tt></dd></dl>
+
+<dl><dt><a name="OpenWeatherMapLibrary-getWeatherInfo"><strong>getWeatherInfo</strong></a>(self, city)</dt><dd><tt>Get&nbsp;weather&nbsp;information&nbsp;from&nbsp;OpenWeatherMap.<br>
+Data&nbsp;format&nbsp;is&nbsp;JSON.<br>
+&nbsp;<br>
+@param&nbsp;city&nbsp;City&nbsp;name<br>
+&nbsp;<br>
+City&nbsp;name:&nbsp;Please&nbsp;search&nbsp;nearest&nbsp;city&nbsp;from&nbsp;OpenWeatherMap.</tt></dd></dl>
+
+<dl><dt><a name="OpenWeatherMapLibrary-getWindSpeed"><strong>getWindSpeed</strong></a>(self, data)</dt><dd><tt>Convert&nbsp;JSON&nbsp;to&nbsp;wind&nbsp;speed.<br>
+JSON&nbsp;is&nbsp;can&nbsp;get&nbsp;from&nbsp;getWeatherInfo&nbsp;function.<br>
+&nbsp;<br>
+@param&nbsp;data&nbsp;JSON<br>
+@return&nbsp;float</tt></dd></dl>
+
+<dl><dt><a name="OpenWeatherMapLibrary-toLocalTime"><strong>toLocalTime</strong></a>(self, unixtime)</dt><dd><tt>Convert&nbsp;UnixTime&nbsp;to&nbsp;LocalTime.<br>
+&nbsp;<br>
+@param&nbsp;unixtime&nbsp;UnixTime<br>
+@return&nbsp;datetime</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>api</strong> = 'http://api.openweathermap.org/data/2.5/weather?q={city}&amp;units=metric&amp;appid={key}'</dl>
+
+<dl><dt><strong>request_key</strong> = ''</dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>___author___</strong> = 'Seiya Hazama'<br>
+<strong>___version___</strong> = '1.0'</td></tr></table>
+</body></html>
